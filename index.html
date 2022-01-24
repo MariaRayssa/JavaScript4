@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	
+	<label>Número mínimo</label>
+	<input type="number" id="input1"> <br>
+	<label>Número máximo</label>
+	<input type="number" id="input2"> <br>
+	<button onclick="executa()">Clique</button>
+	
+ 	<script type="text/javascript">
+  
+    function executa(numero1, numero2){
+	 let numeroMin, numeroMax, auxiliar, resultado, contador;
+	 numeroMin = document.getElementById("input1").value;
+	 numeroMax = document.getElementById("input2").value;
+	 numeroMin = parseInt(numeroMin);
+	 numeroMax = parseInt(numeroMax);
+	 auxiliar = numeroMin;
+	 resultado= "";
+	 contador = 0;
+	 alert(numero1 + "" + numero2);
+	 if(numeroMin>=numeroMax){
+	 document.write("valores inválidos, o primeiro é maior que o segundo");}
+	 
+	 else{
+	 while(numeroMin<=numeroMax){
+	    if(numeroMin%2 == 0 && numeroMin%3 == 0){
+		 resultado = resultado + ", " + numeroMin;
+		 contador++;
+		}
+	  numeroMin++;}
+             
+	 
+	 document.write(resultado + "<br>A quantidade é " +contador);
+	}
+	}
+	
+	</script>
+	</body>
+</html>
